@@ -1,0 +1,127 @@
+:root {
+  --clr-primary-200: hsl(75, 94%, 57%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-netural-300: hsl(0, 0%, 20%);
+  --clr-neutral-600: hsl(0, 0%, 12%);
+  --clr-netural-800: hsl(0, 0%, 8%);
+
+  --ff-main: "Inter", sans-serif;
+
+  --fw-regular: 400;
+  --fw-semi: 600;
+  --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* General Styling */
+body {
+  background: var(--clr-netural-800);
+  color: var(--clr-neutral-100);
+  font-family: var(--ff-main);
+  font-size: 0.875rem;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+/* Profile Styling */
+.profile {
+  --profile-padding: 2.3rem;
+  --profile-gap: 1.5rem;
+  padding: var(--profile-padding);
+  background: var(--clr-neutral-600);
+  border-radius: 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--profile-gap);
+  width: 370px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.profile__img img {
+  width: 85px;
+  border-radius: 50%;
+  margin-inline: auto;
+}
+
+.profile__name {
+  font-size: 1.5rem;
+}
+
+.profile__info {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.profile__city {
+  color: var(--clr-primary-200);
+  font-weight: var(--fw-bold);
+}
+
+.socials {
+  display: grid;
+  gap: 1rem;
+}
+
+.social-link {
+  background: var(--clr-netural-300);
+  padding: 0.75rem 0;
+  border-radius: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.social-link:is(:active, :hover) {
+  background: var(--clr-primary-200);
+  color: var(--clr-neutral-600);
+}
+
+.social__title {
+  font-size: 0.875rem;
+  font-weight: var(--fw-semi);
+  transition: 0.7s all;
+}
+
+/* Media Queries */
+@media (max-width: 400px) {
+  .profile {
+    width: 350px;
+  }
+}
